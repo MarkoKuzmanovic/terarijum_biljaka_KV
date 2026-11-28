@@ -1,0 +1,52 @@
+/* style.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-custom {
+    background-color: #1b4d3e;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.nav-link:hover {
+    color: #a3e4d7 !important;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(27, 77, 62, 0.7), rgba(27, 77, 62, 0.7)), url('https://images.unsplash.com/photo-1520302293032-d129705a8c1d?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.btn-custom {
+    background-color: #a3e4d7;
+    color: #1b4d3e;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #88c9bc;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: auto;
+    background-color: #1b4d3e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}

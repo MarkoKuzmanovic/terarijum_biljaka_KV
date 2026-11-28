@@ -2,31 +2,60 @@
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
-    <title>Terarium</title>
-    <style>
-        body { font-family: sans-serif; margin: 0; background: #f4f7f4; color: #333; }
-        header { background: #1b4d3e; color: #fff; display: flex; justify-content: space-between; padding: 1rem 2rem; align-items: center; }
-        .logo { color: #a3e4d7; font-weight: bold; }
-        ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
-        a { color: #fff; text-decoration: none; }
-        main { text-align: center; padding: 4rem 1rem; }
-        .btn { background: #1b4d3e; color: #fff; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terarium - Zeleni svijet u malom</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fontovi -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Povezivanje vlastitog CSS-a -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">🌿 Terarium</div>
-        <ul>
-            <li><a href="#">Početna</a></li>
-            <li><a href="biljke.html">Biljke</a></li>
-            <li><a href="#">Prijava</a></li>
-        </ul>
-    </header>
+    <!-- Navigacija -->
+    <nav class="navbar navbar-expand-lg navbar-custom shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="home.html">🌿 Terarium</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Početna</a></li>
+                    <li class="nav-item"><a class="nav-link" href="biljke.html">Biljke</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light btn-sm px-3 text-dark" href="#">Prijava</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-        <h1>Terarium</h1>
+    <!-- Glavni sadržaj -->
+    <main class="container my-5">
+        <div class="hero-section text-center shadow-lg p-5 rounded-4">
+            <h1 class="display-4 fw-bold mb-3" id="greeting">Dobrodošli u Terarium</h1>
+            <p class="lead mb-4">Otkrijte čarobni svijet malih ekosustava i unesite prirodu u svoj dom.</p>
+            <a href="biljke.html" class="btn btn-custom btn-lg px-4 py-2 shadow">Istraži biljke</a>
+        </div>
     </main>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const hours = new Date().getHours();
+            const greetingElement = document.getElementById('greeting');
+            
+            if (hours < 12) {
+                greetingElement.innerText = "Dobro jutro! Dobrodošli u Terarium 🌿";
+            } else if (hours < 18) {
+                greetingElement.innerText = "Dobar dan! Dobrodošli u Terarium 🌿";
+            } else {
+                greetingElement.innerText = "Dobra večer! Dobrodošli u Terarium 🌿";
+            }
+        });
+    </script>
 </body>
 </html>
